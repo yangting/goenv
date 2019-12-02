@@ -1,12 +1,12 @@
 "@
 "@ keyword "map" settings
 "@
-nmap S :w
-nmap Q :q
-nmap QG :q!
-nmap gB :GoBuild
-nmap gT :GoTest
-nmap gR :GoRun
+nmap S :w<CR>
+nmap Q :q<CR>
+nmap QG :q!<CR>
+nmap gB :GoBuild<CR>
+nmap gT :GoTest<CR>
+nmap gR :GoRun<CR>
 
 
 

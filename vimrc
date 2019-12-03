@@ -1,32 +1,35 @@
-"@
-"@ keyword "map" settings
-"@
-nmap S :w<CR>
-nmap Q :q<CR>
-nmap QG :q!<CR>
-nmap gB :GoBuild<CR>
-nmap gT :GoTest<CR>
-nmap gR :GoRun<CR>
+map <C-s> :w<CR>
+map <C-q> :q<CR>
+
+noremap j h
+noremap k j
+noremap i k
+
+map tt :NERDTree<CR>
 
 
+syntax on
 
-"@
-"@ keyword "set" settings
-"@
+set backspace=2
 set cursorline
 set cursorcolumn
 set textwidth=80
 set linebreak
+set number
 set relativenumber
 set showmode
 set encoding=utf-8
 set nocompatible
 set laststatus=2
-set  ruler
+set ruler
 set undofile
 set history=999
 
-set listchars=tab:»■,trail:-
+"set mouse=a
+"set selection=exclusive
+"set selectmode=mouse,key
+
+set listchars=tab:»■,trail:■
 set list
 
 set wildmenu
@@ -42,21 +45,23 @@ set softtabstop=4
 set showcmd
 set autoindent
 set shiftwidth=4
-
-
-syntax on
 filetype indent on
 
-
-
-"@
-"@ vim-plug settings
-"@
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'nsf/gocode'
-Plug 'valloric/youcompleteme'
-Plug 'tpope/vim-fugitive'
+    Plug 'scrooloose/nerdtree'
+
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'nsf/gocode'
+
+    Plug 'valloric/youcompleteme'
+
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1

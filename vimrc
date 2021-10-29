@@ -1,10 +1,6 @@
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 
-noremap j h
-noremap k j
-noremap i k
-
 map tt :NERDTree<CR>
 
 
@@ -18,8 +14,9 @@ set linebreak
 set number
 set relativenumber
 set showmode
+set showcmd
 set encoding=utf-8
-set nocompatible
+"set nocompatible
 set laststatus=2
 set ruler
 set undofile
@@ -42,10 +39,11 @@ set incsearch
 set tabstop=4
 set expandtab
 set softtabstop=4
-set showcmd
 set autoindent
 set shiftwidth=4
+
 filetype indent on
+filetype plugin on
 
 call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
